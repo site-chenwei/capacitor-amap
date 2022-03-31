@@ -31,19 +31,7 @@ import com.getcapacitor.annotation.PermissionCallback;
                 Manifest.permission.READ_PHONE_STATE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-        }),
-        @Permission(alias = "capacitorAMapBackgroundLocation", strings = {
-                Manifest.permission.ACCESS_COARSE_LOCATION,
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_NETWORK_STATE,
-                Manifest.permission.ACCESS_WIFI_STATE,
-                Manifest.permission.CHANGE_WIFI_STATE,
-                Manifest.permission.INTERNET,
-                Manifest.permission.READ_PHONE_STATE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS,
-                Manifest.permission.FOREGROUND_SERVICE,
-                Manifest.permission.ACCESS_BACKGROUND_LOCATION})
+        })
 })
 public class CapacitorAMapPlugin extends Plugin {
     private static final String TAG = "CapacitorAMap";
@@ -67,9 +55,7 @@ public class CapacitorAMapPlugin extends Plugin {
 
     @PermissionCallback
     public void LocationPermissionCallback(PluginCall call) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && getPermissionState("capacitorAMapBackgroundLocation") != PermissionState.GRANTED) {
-            call.reject("用户拒绝授予权限");
-        } else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P && getPermissionState("capacitorAMapLocation") != PermissionState.GRANTED) {
+        if (getPermissionState("capacitorAMapLocation") != PermissionState.GRANTED) {
             call.reject("用户拒绝授予权限");
         } else {
             this.locateWhenPermitted(call);
@@ -78,9 +64,7 @@ public class CapacitorAMapPlugin extends Plugin {
 
     @PluginMethod
     public void locate(PluginCall call) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && getPermissionState("capacitorAMapBackgroundLocation") != PermissionState.GRANTED) {
-            requestPermissionForAlias("capacitorAMapBackgroundLocation", call, "LocationPermissionCallback");
-        } else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P && getPermissionState("capacitorAMapLocation") != PermissionState.GRANTED) {
+        if (getPermissionState("capacitorAMapLocation") != PermissionState.GRANTED) {
             requestPermissionForAlias("capacitorAMapLocation", call, "LocationPermissionCallback");
         } else {
             this.locateWhenPermitted(call);
