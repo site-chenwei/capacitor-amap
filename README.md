@@ -8,7 +8,7 @@ npx cap sync
 ```
 ##配置
 ### IOS
-####配置IOS_KEY
+配置IOS_KEY
 IOS安装插件后，需在项目的capacitor.config.ts/capacitor.config.json中为项目配置IOS_KEY
 ```typescript
 const config: CapacitorConfig = {
@@ -30,3 +30,4 @@ IOS安装插件后，需在XCODE的info.plist中为项目配置以下内容
 ### Android
 Android安装插件后，需要在安卓项目app模块的AndroidManifest.xml中修改自己的高德安卓API_KEY
 
+<img width="1384" alt="image" src="https://user-images.githubusercontent.com/23025255/161021530-eb2ba6d6-e4ed-41e9-b042-67f03f538933.png">
