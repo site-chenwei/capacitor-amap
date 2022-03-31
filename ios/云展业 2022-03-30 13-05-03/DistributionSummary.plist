@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>云展业.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>0.0.1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>22AB751C7356998F56B489B114CC66E3BF53CC1B</string>
+				<key>dateExpires</key>
+				<string>2025/3/20</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>7NF43F9NKC.com.i2f.i2work.lark.naive.loan.v1</string>
+				<key>aps-environment</key>
+				<string>production</string>
+				<key>com.apple.developer.networking.wifi-info</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>7NF43F9NKC</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>云展业.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>2307a92b-27fa-434b-afd1-f9911b1e6ba3</string>
+				<key>dateExpires</key>
+				<string>2023/3/30</string>
+				<key>name</key>
+				<string>iOS Team Inhouse Provisioning Profile: com.i2f.i2work.lark.naive.loan.v1</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>7NF43F9NKC</string>
+				<key>name</key>
+				<string>i2Finance Software Co., Ltd.</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>0.0.1</string>
+		</dict>
+	</array>
+</dict>
+</plist>
