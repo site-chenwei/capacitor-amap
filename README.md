@@ -1,12 +1,12 @@
 # capacitor-amap
  高德地图capacitor插件
 
-##安装
+## 安装
 ```shell
 npm install capacitor-amap
 npx cap sync
 ```
-##配置
+## 配置
 ### IOS
 配置IOS_KEY
 IOS安装插件后，需在项目的capacitor.config.ts/capacitor.config.json中为项目配置IOS_KEY
