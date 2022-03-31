@@ -20,5 +20,9 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+    <string>此应用需要蓝牙权限才能正常使用</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>此应用需要定位权限才能正常使用</string>
 </dict>
 </plist>
