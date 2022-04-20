@@ -85,7 +85,7 @@ public class CapacitorAMapPlugin: CAPPlugin, AMapLocationManagerDelegate, AMapSe
         if( isInLocation == false){
             isInLocation = true
             self.aMapLocationManager?.requestLocation(withReGeocode: true, completionBlock: { [weak self] (location: CLLocation?, reGeocode: AMapLocationReGeocode?, error: Error?) in
-                
+                isInLocation = false
                 if let error = error {
                     let error = error as NSError
                     if error.code == AMapLocationErrorCode.locateFailed.rawValue {
